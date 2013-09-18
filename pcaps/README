@@ -1,0 +1,27 @@
+Nicholas Andre
+1. 276 packets in this set
+2. FTP
+3. Because it does not implement any encryption/ssl/tls or attempt to obfuscate the credentials or files in any way.
+4. SFTP, SCP, etc.
+5. 67.23.79.113
+6. USER stokerj PASS w00tful!
+7. 3 files
+8. abc.jpg, code.rtf, secret.pdf
+9. Attached
+10. 74566
+11. There were 3 pairs for POP3, along with several others that seemed to be credentials
+12. I used dsniff -p set2.pcap because I'm lazy and didn't want to string search
+13. 
+
+USER e129286 PASS 4.Ekkama 10.122.15.146.54630 -> arikanda.general.services.metu.edu.tr.110 (pop3)
+username [mbergeson@hjnews.com] password [mb123on] tcp 10.117.15.217.49795 -> mail.newswest.com.110 (pop3)
+username [brewer] password [1qazxsw209simona12] tcp 10.124.15.238.49767 -> www.imartini.it.110 (pop3)
+LOGIN dmartini@cutaway.it se1lasa tcp 10.124.15.238.49773 -> 166.119.168.109.host.static.ip.kpnqwest.it.143 (imap)
+
+14.The second two POP usernames worked, the first returned authentication failure.
+15. I did verified them by following yonder TCP streams and looking for a message that said OK! or VERIFICATION FAILED GOODBYE.
+16. Because you really ought not to steal passwords and log on to people's email. You should instead responsibly inform them that they need to use TLS wrapped protocols.
+17. Use a TLS wrapped protocol.
+18. I used tshark with the command `tshark -r set2.pcap -q -z hosts,ipv4` because it's faster than a string search. See set2_hosts.txt. I also did this with a python script parsing the output of a reverse DNS dig lookup, but that was stupid.
+19. I'm going to assume you want protocols on top of TCP. In that case, SSL was very popular because it wraps many other transfer protocols. See protocols.txt for a summary. I used `tshark -r file.pcap -q -z io,phs`
+20. Several large PDFs were transferred over FTP. They had names like "Security things" and "OpenBSD".

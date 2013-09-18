@@ -1,0 +1,77 @@
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+eth                                      frames:74566 bytes:65077253
+  ip                                     frames:74220 bytes:65038587
+    tcp                                  frames:71957 bytes:64533912
+      data                               frames:5628 bytes:8078064
+      ssl                                frames:11294 bytes:13534038
+        tcp.segments                     frames:1800 bytes:2244739
+          ssl                            frames:82 bytes:111053
+        malformed                        frames:1 bytes:1440
+      http                               frames:6589 bytes:8588332
+        data-text-lines                  frames:134 bytes:88764
+          tcp.segments                   frames:88 bytes:57728
+        tcp.segments                     frames:12 bytes:6263
+        png                              frames:67 bytes:52005
+          tcp.segments                   frames:39 bytes:29718
+        image-gif                        frames:40 bytes:21095
+          tcp.segments                   frames:12 bytes:7236
+        media                            frames:28 bytes:16225
+          tcp.segments                   frames:24 bytes:13948
+        json                             frames:5 bytes:1521
+          tcp.segments                   frames:3 bytes:549
+          data-text-lines                frames:2 bytes:972
+            tcp.segments                 frames:2 bytes:972
+        image-jfif                       frames:137 bytes:104337
+          tcp.segments                   frames:137 bytes:104337
+        uasip                            frames:1 bytes:846
+          tcp.segments                   frames:1 bytes:846
+        ocsp                             frames:4 bytes:2799
+          tcp.segments                   frames:2 bytes:1724
+        xml                              frames:6 bytes:5090
+          tcp.segments                   frames:6 bytes:5090
+        http                             frames:2 bytes:2170
+          http                           frames:1 bytes:1440
+          tcp.segments                   frames:1 bytes:730
+        mime_multipart                   frames:1 bytes:424
+          tcp.segments                   frames:1 bytes:424
+      reload-framing                     frames:23 bytes:33638
+      ftp                                frames:106 bytes:13191
+      telnet                             frames:66 bytes:5498
+      pop                                frames:31 bytes:2567
+      ftp-data                           frames:8537 bytes:12362484
+      malformed                          frames:60 bytes:52134
+      ssh                                frames:120 bytes:136664
+      imap                               frames:17 bytes:2625
+      xmpp                               frames:5 bytes:940
+    udp                                  frames:1089 bytes:220916
+      snmp                               frames:27 bytes:2560
+      udpencap                           frames:239 bytes:105026
+        esp                              frames:227 bytes:101098
+        isakmp                           frames:12 bytes:3928
+      data                               frames:96 bytes:19593
+      dns                                frames:665 bytes:75477
+        malformed                        frames:3 bytes:222
+      ntp                                frames:8 bytes:720
+      bootp                              frames:30 bytes:10420
+      nbns                               frames:7 bytes:644
+      teredo                             frames:2 bytes:254
+        ipv6                             frames:2 bytes:254
+          icmpv6                         frames:2 bytes:254
+      sip                                frames:6 bytes:3687
+      isakmp                             frames:4 bytes:1710
+      db-lsp-disc                        frames:5 bytes:825
+    gre                                  frames:955 bytes:267093
+      ppp                                frames:925 bytes:265293
+        comp_data                        frames:913 bytes:264559
+        lcp                              frames:12 bytes:734
+    icmp                                 frames:219 bytes:16666
+  ipv6                                   frames:259 bytes:33446
+    udp                                  frames:124 bytes:13286
+      dns                                frames:124 bytes:13286
+    icmpv6                               frames:135 bytes:20160
+  arp                                    frames:87 bytes:5220
+===================================================================
